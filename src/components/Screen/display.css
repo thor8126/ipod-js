@@ -1,0 +1,40 @@
+.display{
+    background-color: white;
+    margin: 0px;
+    width : calc(100% - 20px);
+    height: calc(100% - 20px);
+    border: 1px solid black;
+    position: relative;
+    border-radius: 4px;
+}
+
+
+.navbar{
+    position: absolute;
+    width: calc(100% - 21px);
+    display: flex;
+    top: 2px;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.left-nav,.right-nav{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.content{
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 24px);
+    background: url(https://source.unsplash.com/featured/?nature);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 0 4px 4px;
+}
