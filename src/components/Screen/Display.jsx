@@ -1,5 +1,6 @@
 import React from 'react'
 import './display.css'
+import Sidebar from './Sidebar'
 
 function Display() {
   return (
@@ -17,6 +18,7 @@ function Display() {
             </div>
 
             <div className="content">
+                <Sidebar/>
               </div>
         </div>                
     </>

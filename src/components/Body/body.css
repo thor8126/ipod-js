@@ -1,7 +1,7 @@
 :root {
     --color: #000000;
-    --bg-1: #28252a;
-    --bg-2: #28252a;
+    --bg-1: #FFF0E5;
+    --bg-2: #FFF0E5;
 }
 
 .upper {
@@ -12,8 +12,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.75), /* bottom */
+            inset -5px 0px 10px -5px rgba(0, 0, 0, 0.75), /* left */
+            inset 5px 0px 10px -5px rgba(0, 0, 0, 0.75); /* right */
 }
 
 .lower {
@@ -24,9 +27,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.75),
-        inset 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-        
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: inset 0px -5px 10px -5px rgba(0, 0, 0, 0.75), /* top */
+    inset -5px 0px 10px -5px rgba(0, 0, 0, 0.75), /* left */
+    inset 5px 0px 10px -5px rgba(0, 0, 0, 0.75); /* right */
+
 }

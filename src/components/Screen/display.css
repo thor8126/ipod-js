@@ -1,11 +1,13 @@
 .display{
     background-color: white;
     margin: 0px;
-    width : calc(100% - 20px);
-    height: calc(100% - 20px);
-    border: 1px solid black;
+    height: calc(100% - 22px);
+    width : calc(100% - 22px);
     position: relative;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: inset 0px 5px 10px -5px rgba(231, 229, 229, 0.75), /* bottom */
+                inset -5px 0px 10px -5px rgba(235, 229, 229, 0.75), /* left */
+                inset 5px 0px 10px -5px rgba(233, 220, 220, 0.75); /* right */
 }
 
 
@@ -18,6 +20,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
+    background-color: #ffffff80;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .left-nav,.right-nav{
@@ -32,7 +37,7 @@
     left: 0;
     width: 100%;
     height: calc(100% - 24px);
-    background: url(https://source.unsplash.com/featured/?nature);
+    background: url(https://source.unsplash.com/featured/?technology);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
