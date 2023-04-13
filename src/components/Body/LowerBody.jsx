@@ -2,10 +2,10 @@ import React from 'react'
 import './body.css'
 import Buttons from '../Controls/Buttons'
 
-function LowerBody() {
+function LowerBody(props) {
   return (
     <div className="lower">
-       <Buttons/>
+       <Buttons toggleMenu={props.toggleMenu}/>
     </div>
   )
 }

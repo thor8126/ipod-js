@@ -1,7 +1,7 @@
 :root {
     --color: #000000;
-    --bg-1: #FFF0E5;
-    --bg-2: #FFF0E5;
+    --bg-1: #99b7b1;
+    --bg-2: #99b7b1;
 }
 
 .upper {
@@ -12,8 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
     box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.75), /* bottom */
             inset -5px 0px 10px -5px rgba(0, 0, 0, 0.75), /* left */
             inset 5px 0px 10px -5px rgba(0, 0, 0, 0.75); /* right */

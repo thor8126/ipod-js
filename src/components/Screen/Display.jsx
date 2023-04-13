@@ -2,7 +2,10 @@ import React from 'react'
 import './display.css'
 import Sidebar from './Sidebar'
 
-function Display() {
+function Display(props) {
+  // getState from props
+  const { showMenu } = props
+  
   return (
     <>
         <div className="display">
@@ -18,7 +21,7 @@ function Display() {
             </div>
 
             <div className="content">
-                <Sidebar/>
+                {showMenu && <Sidebar/>}
               </div>
         </div>                
     </>

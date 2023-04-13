@@ -3,13 +3,9 @@
     width: 45%;
     height: 100%;
     z-index: 2;
-    visibility: hidden;
     box-shadow: 2px 0px 6px rgba(0,0,0,0.3); /* add this */
   }
   
-  .open {
-    visibility: visible;
-  }
   
   .sidebar::before {
     content: "";
@@ -45,3 +41,7 @@
     background-color: rgba(133, 132, 184, 0.3);
   }
   
+
+  .sidebar-item.selected {
+    background-color: rgba(133, 132, 184, 0.5);
+    }
