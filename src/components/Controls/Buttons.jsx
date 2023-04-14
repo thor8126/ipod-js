@@ -5,13 +5,28 @@ import ZingTouch from 'zingtouch'
 
 function Buttons(props) {
 
-  const rotate = (e) => {
+  const { setActive } = props
+ 
+  const rotate = () => {
     const container = document.querySelector('.ipod-controller')
     const region = new ZingTouch.Region(container)
+
     region.bind(container, 'rotate', (e) => {
-      console.log(e.detail.distanceFromLast)
+      const clockwise = e.detail.distanceFromLast > 0
+
+      if (Math.abs(e.detail.distanceFromOrigin) < 30) {
+        return
+      }
+
+      if (clockwise) {
+        setActive((active + 1) % 4)
+      } else {
+        setActive((active - 1 + 4) % 4)
+      }
     })
   }
+  
+
 
   useEffect(() => {
     rotate()
@@ -21,19 +36,19 @@ function Buttons(props) {
     <>
       <div className="ipod-controller">
         <div className="ipod-controller__menu" onClick={props.toggleMenu}>
-          <i class="fa-solid fa-bars clr-grey"></i>
+          <i className="fa-solid fa-bars clr-grey"></i>
         </div>
 
         <div className="ipod-controller__next" >
-          <i class="fa-solid fa-forward clr-grey"></i>
+          <i className="fa-solid fa-forward clr-grey"></i>
         </div>
 
         <div className="ipod-controller__back" >
-          <i class="fa-solid fa-backward clr-grey"></i>
+          <i className="fa-solid fa-backward clr-grey"></i>
         </div>
 
         <div className="ipod-controller__play-pause" >
-        <i class="fa-solid fa-pause clr-grey"></i>
+        <i className="fa-solid fa-pause clr-grey"></i>
         </div>
 
         <div className="ipod-controller__circle" onClick={rotate}>

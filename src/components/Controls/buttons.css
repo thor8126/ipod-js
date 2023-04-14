@@ -26,12 +26,7 @@
     color: black;
 }
 
-.ipod-controller__menu:hover,
-.ipod-controller__next:hover,
-.ipod-controller__back:hover,
-.ipod-controller__play-pause:hover {
-    background-color: #e1e1e1;
-}
+
 
 .ipod-controller__menu:active,
 .ipod-controller__next:active,

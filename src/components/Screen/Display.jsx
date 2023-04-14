@@ -21,7 +21,7 @@ function Display(props) {
             </div>
 
             <div className="content">
-                {showMenu && <Sidebar/>}
+                {showMenu && <Sidebar active={props.active} setActive={props.setActive}/>}
               </div>
         </div>                
     </>

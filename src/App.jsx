@@ -5,6 +5,7 @@ import LowerBody from "./components/Body/LowerBody";
 
 function App(props) {
   const [showMenu, setShowMenu] = useState(false);
+  const [active, setActive] = useState(0)
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -13,8 +14,8 @@ function App(props) {
   return (
     <>
       <div className="main">
-        <UpperBody showMenu={showMenu} />
-        <LowerBody toggleMenu={toggleMenu} showMenu={showMenu} />
+        <UpperBody showMenu={showMenu} active={active} setActive={setActive}/>
+        <LowerBody toggleMenu={toggleMenu} showMenu={showMenu} active={active} setActive={setActive}/>
       </div>
     </>
   );

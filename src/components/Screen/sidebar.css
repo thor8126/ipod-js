@@ -45,3 +45,7 @@
   .sidebar-item.selected {
     background-color: rgba(133, 132, 184, 0.5);
     }
+
+  .active{
+    background-color: rgba(133, 132, 184, 0.5);
+  }
