@@ -1,6 +1,11 @@
 import React from 'react'
 import './display.css'
 import Sidebar from './Sidebar'
+import Page from './Pages/Page'
+import Music from './Pages/Music'
+import Games from './Pages/Games'
+import Settings from './Pages/Settings'
+
 
 function Display(props) {
   // getState from props
@@ -21,7 +26,10 @@ function Display(props) {
             </div>
 
             <div className="content">
-                {showMenu && <Sidebar active={props.active} setActive={props.setActive}/>}
+                {props.active === 1 && <Music/>}
+                {props.active === 2 && <Games/>}
+                {props.active === 3 && <Settings/>}
+                {showMenu && <Sidebar active={props.active}/>}
               </div>
         </div>                
     </>
