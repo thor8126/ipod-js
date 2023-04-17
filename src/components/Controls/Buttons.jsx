@@ -5,7 +5,6 @@ import './buttons.css'
 function Buttons(props) {
 
   const { setActive, active } = props
-  console.log(active)
  
   const rotate = () => {
     const container = document.querySelector('.ipod-controller');

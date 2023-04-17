@@ -4,12 +4,13 @@ import UpperBody from "./components/Body/UpperBody";
 import LowerBody from "./components/Body/LowerBody";
 
 function App(props) {
-  const [showMenu, setShowMenu] = useState(false);
-
+  const [showMenu, setShowMenu] = useState(true);
+  
   const [active, setActive] = useState(0)
+  console.log(active);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    setShowMenu(showMenu);
   };
 
   return (
