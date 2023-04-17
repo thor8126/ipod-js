@@ -1,10 +1,7 @@
 import React from 'react'
 import './display.css'
 import Sidebar from './Sidebar'
-import Page from './Pages/Page'
-import Music from './Pages/Music'
-import Games from './Pages/Games'
-import Settings from './Pages/Settings'
+import Logo from './Pages/Logo'
 
 
 function Display(props) {
@@ -26,9 +23,10 @@ function Display(props) {
             </div>
 
             <div className="content">
-                {props.active === 1 && <Music/>}
-                {props.active === 2 && <Games/>}
-                {props.active === 3 && <Settings/>}
+                {props.active === 0 && <Logo active={props.active}/>}
+                {props.active === 1 && <Logo active={props.active}/>}
+                {props.active === 2 && <Logo active={props.active}/>}
+                {props.active === 3 && <Logo active={props.active}/>}
                 {showMenu && <Sidebar active={props.active}/>}
               </div>
         </div>                

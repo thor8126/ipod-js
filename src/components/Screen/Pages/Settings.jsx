@@ -1,10 +1,12 @@
 import React from 'react'
-import './page.css'
+import './style.css'
 
 function Settings() {
   return (
-    <div className='page'>Settings</div>
-  )
+    <div className='container'>
+
+    </div>
+    )
 }
 
 export default Settings

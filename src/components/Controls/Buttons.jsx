@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react'
 import './buttons.css'
-
+import Games from '../Screen/Pages/Games'
+import Music from '../Screen/Pages/Music'
+import Settings from '../Screen/Pages/Settings'
+import Page from '../Screen/Pages/Page'
 
 function Buttons(props) {
-
   const { setActive, active } = props
- 
+
   const rotate = () => {
     const container = document.querySelector('.ipod-controller');
     let isRotating = false;
@@ -71,6 +73,18 @@ function Buttons(props) {
     e.preventDefault();
   }
 
+  const openMenu = () => {
+    if (active === 0) {
+      console.log('home');
+    } else if (active === 1) {
+      console.log('music');
+    } else if (active === 2) {
+      console.log('games');
+    } else if (active === 3) {
+      console.log('settings');
+    }
+  }
+
   return (
     <>
       <div className="ipod-controller" onDragStart={handleDragStart}>
@@ -91,7 +105,7 @@ function Buttons(props) {
         <i className="fa-solid fa-pause clr-grey"></i>
         </div>
 
-        <div className="ipod-controller__circle">
+        <div className="ipod-controller__circle" onClick={openMenu}>
         </div>
 
       </div>

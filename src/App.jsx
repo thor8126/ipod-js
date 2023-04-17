@@ -7,17 +7,16 @@ function App(props) {
   const [showMenu, setShowMenu] = useState(true);
   
   const [active, setActive] = useState(0)
-  console.log(active);
 
   const toggleMenu = () => {
-    setShowMenu(showMenu);
+    setShowMenu(!showMenu);
   };
 
   return (
     <>
       <div className="main">
         <UpperBody showMenu={showMenu} active={active}/>
-        <LowerBody toggleMenu={toggleMenu} setActive={setActive}/>
+        <LowerBody toggleMenu={toggleMenu} setActive={setActive} active={active}/>
       </div>
     </>
   );

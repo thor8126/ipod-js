@@ -1,9 +1,11 @@
 import React from 'react'
-import './page.css'
+import './style.css'
 
 function Music() {
   return (
-    <div className='page'>Music</div>
+    <div className='container'>
+
+    </div>     
   )
 }
 

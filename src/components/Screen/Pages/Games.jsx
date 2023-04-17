@@ -1,9 +1,11 @@
 import React from 'react'
-import './page.css'
+import './style.css'
 
 function Games() {
   return (
-    <div className='page'>Games</div>
+    <div className='container'>
+
+    </div>
   )
 }
 

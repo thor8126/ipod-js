@@ -1,10 +1,10 @@
 import React from 'react'
-import './page.css'
+import './style.css'
 
 function Page() {
   return (
-    <div className='page'>
-      <h2>CoverFlow</h2>
+    <div className='container'>
+
     </div>
   )
 }
