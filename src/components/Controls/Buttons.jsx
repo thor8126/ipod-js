@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react'
 import './buttons.css'
-import Games from '../Screen/Pages/Games'
-import Music from '../Screen/Pages/Music'
-import Settings from '../Screen/Pages/Settings'
-import Page from '../Screen/Pages/Page'
+
 
 function Buttons(props) {
-  const { setActive, active } = props
+  const { setActive, active, showMenu , toggleMenu } = props
 
   const rotate = () => {
     const container = document.querySelector('.ipod-controller');
@@ -65,23 +62,27 @@ function Buttons(props) {
   };
   
   useEffect(() => {
-    rotate();
-  });
+      rotate();
+  },[]);
   
   // make buttons non draggable
   const handleDragStart = (e) => {
     e.preventDefault();
   }
 
-  const openMenu = () => {
+  const openWindow = () => {
     if (active === 0) {
       console.log('home');
+      toggleMenu();
     } else if (active === 1) {
       console.log('music');
+      toggleMenu();
     } else if (active === 2) {
       console.log('games');
+      toggleMenu();
     } else if (active === 3) {
       console.log('settings');
+      toggleMenu();
     }
   }
 
@@ -105,7 +106,7 @@ function Buttons(props) {
         <i className="fa-solid fa-pause clr-grey"></i>
         </div>
 
-        <div className="ipod-controller__circle" onClick={openMenu}>
+        <div className="ipod-controller__circle" onClick={openWindow}>
         </div>
 
       </div>

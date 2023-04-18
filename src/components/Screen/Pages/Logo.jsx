@@ -1,10 +1,10 @@
 import React from 'react'
-import './page.css'
+import './style.css'
 
 function Logo(props) {
     const { active } = props
   return (
-    <div className='page'>
+    <div className='container'>
         {active === 0 && <div>Home</div>}
         {active === 1 && <div>Music</div>}
         {active === 2 && <div>Games</div>}

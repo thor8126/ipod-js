@@ -23,12 +23,15 @@ function Display(props) {
             </div>
 
             <div className="content">
-                {props.active === 0 && <Logo active={props.active}/>}
-                {props.active === 1 && <Logo active={props.active}/>}
-                {props.active === 2 && <Logo active={props.active}/>}
-                {props.active === 3 && <Logo active={props.active}/>}
+                {(props.active === 0 && showMenu==true) && <Logo active={props.active}/>}
+                {(props.active === 1 && showMenu==true) && <Logo active={props.active}/>}
+                {(props.active === 2 && showMenu==true) && <Logo active={props.active}/>}
+                {(props.active === 3 && showMenu==true) && <Logo active={props.active}/>}
+
                 {showMenu && <Sidebar active={props.active}/>}
-              </div>
+
+                
+            </div>
         </div>                
     </>
   )
