@@ -6,7 +6,7 @@ function UpperBody(props) {
   const { active } = props
   return (
     <div className="upper">
-      <Display showMenu={props.showMenu} active={active} setActive={props.setActive}/>
+      <Display showMenu={props.showMenu} active={active} setActive={props.setActive} activeWindow={props.activeWindow} />
     </div>
   );
 }

@@ -8,9 +8,10 @@ function App(props) {
 
   const [active, setActive] = useState(0);
 
-  const [window, setWindow] =useState(false);
+  const [activeWindow, setActiveWindow] =useState('coverflow');
   
-  console.log(showMenu)
+  // console.log('menu ',showMenu)
+  // console.log(window)
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -25,12 +26,15 @@ function App(props) {
   return (
     <>
       <div className="main">
-        <UpperBody showMenu={showMenu} active={active} />
+        <UpperBody showMenu={showMenu} active={active} activeWindow={activeWindow} setActiveWindow={setActiveWindow} />
         <LowerBody
           toggleMenu={toggleMenu}
+          setShowMenu={setShowMenu}
           showMenu={showMenu}
           setActive={handleSetActive}
           active={active}
+          setActiveWindow={setActiveWindow}
+          activeWindow={activeWindow}
         />
       </div>
     </>

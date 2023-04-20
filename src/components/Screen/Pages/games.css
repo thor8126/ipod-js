@@ -1,0 +1,18 @@
+.games{
+    width: 100%;
+    height: calc(100% - 3px);
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+.fa-dice{
+    font-size: 4rem;
+}
+
+.text{
+    color: black;
+}

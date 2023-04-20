@@ -3,7 +3,7 @@ import './buttons.css'
 
 
 function Buttons(props) {
-  const { setActive, active, showMenu , toggleMenu } = props
+  const { setActive, active, toggleMenu, setActiveWindow ,setShowMenu } = props
 
   const rotate = () => {
     const container = document.querySelector('.ipod-controller');
@@ -72,17 +72,17 @@ function Buttons(props) {
 
   const openWindow = () => {
     if (active === 0) {
-      console.log('home');
-      toggleMenu();
+      setShowMenu(false); 
+      setActiveWindow('coverflow');
     } else if (active === 1) {
-      console.log('music');
-      toggleMenu();
+      setShowMenu(false); 
+      setActiveWindow('music');
     } else if (active === 2) {
-      console.log('games');
-      toggleMenu();
+      setShowMenu(false); 
+      setActiveWindow('games');
     } else if (active === 3) {
-      console.log('settings');
-      toggleMenu();
+      setShowMenu(false); 
+      setActiveWindow('settings');
     }
   }
 

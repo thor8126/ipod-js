@@ -2,7 +2,7 @@
     position: absolute;
     width: 45%;
     height: 100%;
-    z-index: 2;
+    z-index: 3;
     box-shadow: 2px 0px 6px rgba(0,0,0,0.3); /* add this */
   }
   

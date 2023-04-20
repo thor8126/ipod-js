@@ -1,7 +1,11 @@
 import React from 'react'
 import './display.css'
 import Sidebar from './Sidebar'
-import Logo from './Pages/Logo'
+import Logo from './Logo'
+import Music from './Pages/Music'
+import Coverflow from './Pages/Coverflow'
+import Settings from './Pages/Settings'
+import Games from './Pages/Games'
 
 
 function Display(props) {
@@ -30,7 +34,11 @@ function Display(props) {
 
                 {showMenu && <Sidebar active={props.active}/>}
 
-                
+                { props.activeWindow ==='coverflow' && <Coverflow/> }
+                { props.activeWindow ==='music' && <Music/> }
+                { props.activeWindow ==='settings' && <Settings/> }
+                { props.activeWindow ==='games' && <Games/> }
+
             </div>
         </div>                
     </>
