@@ -3,7 +3,7 @@ import './buttons.css'
 
 
 function Buttons(props) {
-  const { setActive, active, toggleMenu, setActiveWindow ,setShowMenu } = props
+  const { setActive, active, toggleMenu, setActiveWindow ,setShowMenu ,list , current, setCurrent} = props
 
   const rotate = () => {
     const container = document.querySelector('.ipod-controller');
@@ -86,6 +86,31 @@ function Buttons(props) {
     }
   }
 
+  const nextMusic = () => {
+    if (current < list.length - 1) {
+      setCurrent(current + 1);
+    } else {
+      setCurrent(0);
+    }
+  }
+
+  const prevMusic = () => {
+    if (current > 0) {
+      setCurrent(current - 1);
+    } else {
+      setCurrent(list.length - 1);
+    }
+  }
+
+  const playPause = () => {
+    const audio = document.querySelector('audio');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
   return (
     <>
       <div className="ipod-controller" onDragStart={handleDragStart}>
@@ -94,15 +119,15 @@ function Buttons(props) {
           <i className="fa-solid fa-bars clr-grey"></i>
         </div>
 
-        <div className="ipod-controller__next" >
+        <div className="ipod-controller__next" onClick={nextMusic}>
           <i className="fa-solid fa-forward clr-grey"></i>
         </div>
 
-        <div className="ipod-controller__back" >
+        <div className="ipod-controller__back" onClick={prevMusic}>
           <i className="fa-solid fa-backward clr-grey"></i>
         </div>
 
-        <div className="ipod-controller__play-pause" >
+        <div className="ipod-controller__play-pause" onClick={playPause}>
         <i className="fa-solid fa-pause clr-grey"></i>
         </div>
 

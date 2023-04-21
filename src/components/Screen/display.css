@@ -6,7 +6,6 @@
     width : calc(100% - 22px);
     position: relative;
     border-radius: 8px;
-    border: 4px solid black;
     box-shadow: inset 0px 5px 10px -5px rgba(231, 229, 229, 0.75), /* bottom */
                 inset -5px 0px 10px -5px rgba(235, 229, 229, 0.75), /* left */
                 inset 5px 0px 10px -5px rgba(233, 220, 220, 0.75); /* right */

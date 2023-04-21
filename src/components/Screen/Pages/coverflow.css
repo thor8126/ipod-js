@@ -1,6 +1,6 @@
 .coverflow{
     width: 100%;
-    height: calc(100% - 3px);
+    height: calc(100% - 0px);
     color: white;
     font-size: x-large;
     display: flex;

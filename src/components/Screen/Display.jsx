@@ -35,7 +35,7 @@ function Display(props) {
                 {showMenu && <Sidebar active={props.active}/>}
 
                 { props.activeWindow ==='coverflow' && <Coverflow/> }
-                { props.activeWindow ==='music' && <Music/> }
+                { props.activeWindow ==='music' && <Music current={props.current} setCurrent={props.setCurrent} list={props.list}/> }
                 { props.activeWindow ==='settings' && <Settings/> }
                 { props.activeWindow ==='games' && <Games/> }
 

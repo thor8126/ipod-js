@@ -4,14 +4,14 @@ import UpperBody from "./components/Body/UpperBody";
 import LowerBody from "./components/Body/LowerBody";
 
 function App(props) {
+
+  const list =[0,1,2,3,4,5]
+
   const [showMenu, setShowMenu] = useState(true);
 
   const [active, setActive] = useState(0);
 
   const [activeWindow, setActiveWindow] =useState('coverflow');
-  
-  // console.log('menu ',showMenu)
-  // console.log(window)
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -23,10 +23,22 @@ function App(props) {
     }
   };
 
+  const [current, setCurrent] = useState(0);
+
   return (
     <>
       <div className="main">
-        <UpperBody showMenu={showMenu} active={active} activeWindow={activeWindow} setActiveWindow={setActiveWindow} toggleMenu = {toggleMenu}/>
+        <UpperBody 
+        showMenu={showMenu} 
+        active={active} 
+        activeWindow={activeWindow} 
+        setActiveWindow={setActiveWindow} 
+        toggleMenu = {toggleMenu}
+        list={list}
+        current={current}
+        setCurrent={setCurrent}
+        />
+
         <LowerBody
           toggleMenu={toggleMenu}
           setShowMenu={setShowMenu}
@@ -35,6 +47,9 @@ function App(props) {
           active={active}
           setActiveWindow={setActiveWindow}
           activeWindow={activeWindow}
+          list={list}
+          current={current}
+          setCurrent={setCurrent}
         />
       </div>
     </>
