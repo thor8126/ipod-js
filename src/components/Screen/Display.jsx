@@ -27,10 +27,10 @@ function Display(props) {
             </div>
 
             <div className="content">
-                {(props.active === 0 && showMenu==true) && <Logo active={props.active}/>}
-                {(props.active === 1 && showMenu==true) && <Logo active={props.active}/>}
-                {(props.active === 2 && showMenu==true) && <Logo active={props.active}/>}
-                {(props.active === 3 && showMenu==true) && <Logo active={props.active}/>}
+                {(props.active === 1 && showMenu==true) && <Logo active={props.active} toggleMenu={props.toggleMenu}/>}
+                {(props.active === 0 && showMenu==true) && <Logo active={props.active} toggleMenu={props.toggleMenu}/>}
+                {(props.active === 2 && showMenu==true) && <Logo active={props.active} toggleMenu={props.toggleMenu}/>}
+                {(props.active === 3 && showMenu==true) && <Logo active={props.active} toggleMenu={props.toggleMenu}/>}
 
                 {showMenu && <Sidebar active={props.active}/>}
 

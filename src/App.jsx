@@ -26,7 +26,7 @@ function App(props) {
   return (
     <>
       <div className="main">
-        <UpperBody showMenu={showMenu} active={active} activeWindow={activeWindow} setActiveWindow={setActiveWindow} />
+        <UpperBody showMenu={showMenu} active={active} activeWindow={activeWindow} setActiveWindow={setActiveWindow} toggleMenu = {toggleMenu}/>
         <LowerBody
           toggleMenu={toggleMenu}
           setShowMenu={setShowMenu}
